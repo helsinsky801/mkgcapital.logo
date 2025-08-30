@@ -1,0 +1,2 @@
+# mkgcapital.logo
+kimailah
