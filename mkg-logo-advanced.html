@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKG CAPITAL GROUP - Premium Logo Design</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0f3460 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            color: #00b4db;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(0, 180, 219, 0.3);
+        }
+
+        .header p {
+            color: #cccccc;
+            font-size: 1.1em;
+        }
+
+        .logo-variations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .logo-variant {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .logo-variant:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .variant-title {
+            color: #00b4db;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+
+        /* Modern Circular Design */
+        .modern-circle {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #00b4db, #0083b0, #0056b3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modern-circle::before {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: rotate 8s linear infinite;
+        }
+
+        .modern-circle-inner {
+            background: rgba(0, 0, 0, 0.9);
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .modern-text {
+            color: white;
+            text-align: center;
+        }
+
+        .modern-main {
+            font-size: 2em;
+            font-weight: 900;
+            background: linear-gradient(45deg, #00b4db, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .modern-sub {
+            font-size: 0.8em;
+            color: #00b4db;
+            margin-top: 5px;
+        }
+
+        /* Minimalist Square Design */
+        .minimalist-square {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #2c3e50, #34495e, #2c3e50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .minimalist-square::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+            animation: rotate 6s linear infinite;
+        }
+
+        .minimalist-text {
+            color: white;
+            text-align: center;
+            z-index: 2;
+        }
+
+        .minimalist-main {
+            font-size: 2.2em;
+            font-weight: 800;
+            color: #ecf0f1;
+            letter-spacing: 2px;
+        }
+
+        .minimalist-sub {
+            font-size: 0.7em;
+            color: #bdc3c7;
+            margin-top: 5px;
+            letter-spacing: 1px;
+        }
+
+        /* Luxury Gold Design */
+        .luxury-gold {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #d4af37, #ffd700, #ffdf00);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luxury-gold::before {
+            content: '';
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: rotate 10s linear infinite;
+        }
+
+        .luxury-inner {
+            background: rgba(0, 0, 0, 0.95);
+            width: 170px;
+            height: 170px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+        }
+
+        .luxury-text {
+            color: #ffd700;
+            text-align: center;
+        }
+
+        .luxury-main {
+            font-size: 2em;
+            font-weight: 900;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+
+        .luxury-sub {
+            font-size: 0.7em;
+            margin-top: 5px;
+            color: #d4af37;
+        }
+
+        /* Tech Futuristic Design */
+        .tech-futuristic {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #00b4db, #0083b0, #0056b3);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .tech-inner {
+            background: rgba(0, 0, 0, 0.9);
+            width: 160px;
+            height: 160px;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .tech-text {
+            color: #00b4db;
+            text-align: center;
+        }
+
+        .tech-main {
+            font-size: 1.8em;
+            font-weight: 900;
+            text-shadow: 0 0 15px rgba(0, 180, 219, 0.7);
+        }
+
+        .tech-sub {
+            font-size: 0.6em;
+            margin-top: 5px;
+            color: #0083b0;
+        }
+
+        .controls {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .download-btn {
+            padding: 15px 40px;
+            background: linear-gradient(45deg, #00b4db, #0083b0);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(0, 180, 219, 0.4);
+        }
+
+        .color-picker {
+            margin: 20px 0;
+        }
+
+        .color-option {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: transform 0.2s ease;
+        }
+
+        .color-option:hover {
+            transform: scale(1.2);
+        }
+
+        .color-option.active {
+            border-color: white;
+            transform: scale(1.2);
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            background: rgba(0, 180, 219, 0.3);
+            border-radius: 50%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10%, 90% {
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-100px) rotate(180deg);
+            }
+        }
+
+        .glow-effect {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(0, 180, 219, 0.1) 0%, transparent 70%);
+            animation: glow 4s ease-in-out infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes glow {
+            0% {
+                opacity: 0.2;
+                transform: scale(0.8);
+            }
+            100% {
+                opacity: 0.4;
+                transform: scale(1.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles" id="particles"></div>
+    <div class="glow-effect" style="top: 10%; left: 10%;"></div>
+    <div class="glow-effect" style="top: 70%; right: 15%;"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1>MKG CAPITAL GROUP</h1>
+            <p>Premium Logo Design Variations</p>
+        </div>
+
+        <div class="logo-variations">
+            <div class="logo-variant">
+                <h3 class="variant-title">Modern Circular</h3>
+                <div class="modern-circle">
+                    <div class="modern-circle-inner">
+                        <div class="modern-text">
+                            <div class="modern-main">MKG</div>
+                            <div class="modern-sub">CAPITAL GROUP</div>
+                        </div>
+                    </div>
+                </div>
+                <p>Elegant and professional circular design</p>
+            </div>
+
+            <div class="logo-variant">
+                <h3 class="variant-title">Minimalist Square</h3>
+                <div class="minimalist-square">
+                    <div class="minimalist-text">
+                        <div class="minimalist-main">MKG</div>
+                        <div class="minimalist-sub">CAPITAL GROUP</div>
+                    </div>
+                </div>
+                <p>Clean and sophisticated square design</p>
+            </div>
+
+            <div class="logo-variant">
+                <h3 class="variant-title">Luxury Gold</h3>
+                <div class="luxury-gold">
+                    <div class="luxury-inner">
+                        <div class="luxury-text">
+                            <div class="luxury-main">MKG</div>
+                            <div class="luxury-sub">CAPITAL GROUP</div>
+                        </div>
+                    </div>
+                </div>
+                <p>Premium gold-themed luxury design</p>
+            </div>
+
+            <div class="logo-variant">
+                <h3 class="variant-title">Tech Futuristic</h3>
+                <div class="tech-futuristic">
+                    <div class="tech-inner">
+                        <div class="tech-text">
+                            <div class="tech-main">MKG</div>
+                            <div class="tech-sub">CAPITAL GROUP</div>
+                        </div>
+                    </div>
+                </div>
+                <p>Modern hexagonal tech-inspired design</p>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="color-picker">
+                <span style="color: #cccccc; margin-right: 10px;">Color Theme:</span>
+                <div class="color-option active" style="background: #00b4db;" onclick="changeTheme('blue')"></div>
+                <div class="color-option" style="background: #d4af37;" onclick="changeTheme('gold')"></div>
+                <div class="color-option" style="background: #27ae60;" onclick="changeTheme('green')"></div>
+                <div class="color-option" style="background: #e74c3c;" onclick="changeTheme('red')"></div>
+                <div class="color-option" style="background: #9b59b6;" onclick="changeTheme('purple')"></div>
+            </div>
+
+            <button class="download-btn" onclick="downloadDesign()">Download All Designs</button>
+            <button class="download-btn" onclick="showSpecifications()">View Specifications</button>
+        </div>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                const size = Math.random() * 6 + 2;
+                const left = Math.random() * 100;
+                const delay = Math.random() * 8;
+                const duration = Math.random() * 6 + 6;
+                
+                particle.style.width = `${size}px`;
+                particle.style.height = `${size}px`;
+                particle.style.left = `${left}%`;
+                particle.style.animationDelay = `${delay}s`;
+                particle.style.animationDuration = `${duration}s`;
+                
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        function changeTheme(color) {
+            // Remove active class from all color options
+            document.querySelectorAll('.color-option').forEach(option => {
+                option.classList.remove('active');
+            });
+            
+            // Add active class to clicked option
+            event.target.classList.add('active');
+            
+            // Here you would implement theme changing logic
+            alert(`Theme changed to ${color} mode! For full implementation, this would update all logo colors.`);
+        }
+
+        function downloadDesign() {
+            alert('All logo designs are ready! For professional HD vector files (SVG, AI, EPS), please contact a graphic designer for conversion.');
+        }
+
+        function showSpecifications() {
+            alert('Logo Specifications:\n\n• Format: Vector (recommended for scalability)\n• Colors: Professional blue/gold themes\n• Typography: Modern sans-serif fonts\n• Resolution: HD ready (300+ DPI)\n• File Types: SVG, AI, EPS, PNG, PDF\n\nFor commercial use, ensure proper licensing of fonts and design elements.');
+        }
+
+        // Initialize
+        window.onload = function() {
+            createParticles();
+        };
+    </script>
+</body>
+</html>
